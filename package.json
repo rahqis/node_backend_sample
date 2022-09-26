@@ -4,6 +4,7 @@
   "description": "Node backend server for Levvel candidates",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "jest"
   },
   "author": "Cortez, Zulmy",

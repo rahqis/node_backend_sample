@@ -1,10 +1,14 @@
-const express = require('express')
-const GetBlogs = require('./controller/getBlogs')
-const PostBlog = require('./controller/postBlog')
+const express = require("express");
+const getBlogs = require("../controller/getBlogs");
+const postBlog = require("../controller/postBlog");
+const getComments = require("../controller/getComments");
+const postComment = require("../controller/postComment");
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/blog/:id', GetBlogs)
-router.post('/blog/post', PostBlog)
+router.get("/blog/:id", getBlogs);
+router.post("/blog/post", postBlog);
+router.post("/blog/post/:id/comment", postComment);
+router.get("/blog/post/:id/comment", getComments);
 
-module.exports = router
+module.exports = router;
